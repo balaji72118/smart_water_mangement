@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Water Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging.js"></script>
+    <script>
+      // REPLACE WITH YOUR web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCAcwHeILqNPNGLnNxGCieztnJGeRiLA6c",
+        authDomain: "esp32-project-demo-10b35.firebaseapp.com",
+        databaseURL: "https://esp32-project-demo-10b35-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "esp32-project-demo-10b35",
+        storageBucket: "esp32-project-demo-10b35.firebasestorage.app",
+        messagingSenderId: "519945162321",
+        appId: "1:519945162321:web:acf9bd5eb189d8978c3270"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var database = firebase.database();
+      const messaging = firebase.messaging();
+  </script>
+  <script src="main.js" defer></script>
+  <style>
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                  url('12.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: white;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div class="flex flex-col items-center justify-center min-h-[90vh] px-6">
+    <div class="max-w-6xl w-full text-center space-y-8">
+      <h1 class="text-4xl font-bold">🚰 Smart Water Management System</h1>
+      <p class="text-xl text-white/90">Click below to explore different sections of the project</p>
+
+      <!-- Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        <!-- Dashboard Card -->
+        <a href="dashboard.html" class="glass p-8 flex flex-col items-center justify-center hover:text-cyan-300">
+          <i class="ri-dashboard-2-line text-5xl mb-4"></i>
+          <h2 class="text-2xl font-semibold mb-2">Dashboard</h2>
+          <p class="text-sm">Monitor levels, flow & leakage alerts.</p>
+        </a>
+
+        <!-- Enquiry Card -->
+        <a href="enquiry.html" class="glass p-8 flex flex-col items-center justify-center hover:text-cyan-300">
+          <i class="ri-question-answer-line text-5xl mb-4"></i>
+          <h2 class="text-2xl font-semibold mb-2">Enquiry</h2>
+          <p class="text-sm">Ask questions or report issues here.</p>
+        </a>
+
+        <!-- Cart Card -->
+        <a href="cart.html" class="glass p-8 flex flex-col items-center justify-center hover:text-cyan-300">
+          <i class="ri-shopping-cart-line text-5xl mb-4"></i>
+          <h2 class="text-2xl font-semibold mb-2">Cart</h2>
+          <p class="text-sm">View your selected components.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Marquee -->
+  <footer class="w-full text-center py-3">
+    <marquee behavior="scroll" direction="left" scrollamount="4" class="text-xs tracking-widest text-white/80">
+      💧 Save Water • 🌍 Conserve Every Drop • 💡 Smart Water for a Better Tomorrow • 💧 Save Water • 🌍 Conserve Every Drop • 💡 Smart Water for a Better Tomorrow
+    </marquee>
+  </footer>
+
+</body>
+</html>

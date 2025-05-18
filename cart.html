@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - Smart Water System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+    }
+
+    footer {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex items-center justify-center min-h-[90vh] px-6">
+    <div class="glass w-full max-w-4xl space-y-6">
+      <h1 class="text-3xl font-bold text-center mb-4">🛒 Your Selected Components</h1>
+      <p class="text-center text-white/80">Review the components you've chosen for your project below.</p>
+
+      <!-- Cart Items Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full mt-6 text-sm text-left text-white/90">
+          <thead class="text-xs uppercase bg-white/10 text-white">
+            <tr>
+              <th scope="col" class="px-6 py-3">Component</th>
+              <th scope="col" class="px-6 py-3">Quantity</th>
+              <th scope="col" class="px-6 py-3">Price</th>
+            </tr>
+          </thead>
+          <tbody class="text-white/90">
+            <tr class="border-b border-white/20">
+              <td class="px-6 py-4">FS300A Water Flow Sensor</td>
+              <td class="px-6 py-4">2</td>
+              <td class="px-6 py-4">₹500</td>
+            </tr>
+            <tr class="border-b border-white/20">
+              <td class="px-6 py-4">MPX5010DP Pressure Sensor</td>
+              <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4">₹620</td>
+            </tr>
+            <tr class="border-b border-white/20">
+              <td class="px-6 py-4">ESP32 WROOM-32</td>
+              <td class="px-6 py-4">2</td>
+              <td class="px-6 py-4">₹780</td>
+            </tr>
+            <!-- Add more components here as needed -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Total & Checkout -->
+      <div class="flex flex-col md:flex-row items-center justify-between mt-6 gap-4">
+        <h2 class="text-xl font-semibold">Total: <span class="text-cyan-300">₹1,900</span></h2>
+        <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition duration-200">
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="w-full text-center py-3">
+    <marquee behavior="scroll" direction="left" scrollamount="4" class="text-xs tracking-widest text-white/80">
+      💧 Save Water • 🌍 Conserve Every Drop • 💡 Smart Water for a Better Tomorrow • 💧 Save Water • 🌍 Conserve Every Drop • 💡 Smart Water for a Better Tomorrow
+    </marquee>
+  </footer>
+
+</body>
+</html>

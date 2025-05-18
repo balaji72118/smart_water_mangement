@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enquiry - Smart Water System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+    }
+
+    footer {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex items-center justify-center min-h-[90vh] px-6">
+    <div class="glass w-full max-w-3xl space-y-6">
+      <h1 class="text-3xl font-bold text-center mb-4">📨 Enquiry & Feedback</h1>
+      <p class="text-center text-white/80">Have a question, suggestion, or issue? Let us know below!</p>
+
+      <form action="#" method="post" class="space-y-5">
+        <div>
+          <label class="block mb-2 text-sm font-semibold" for="name">Name</label>
+          <input type="text" id="name" name="name" required
+                 class="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-white/60" placeholder="Your full name" />
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-semibold" for="email">Email</label>
+          <input type="email" id="email" name="email" required
+                 class="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-white/60" placeholder="you@example.com" />
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-semibold" for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" required
+                    class="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-white/60"
+                    placeholder="Type your message here..."></textarea>
+        </div>
+
+        <button type="submit"
+                class="w-full py-2 rounded-lg bg-cyan-500 hover:bg-cyan-600 transition duration-200 font-semibold text-white">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="w-full text-center py-3">
+    <marquee behavior="scroll" direction="left" scrollamount="4" class="text-xs tracking-widest text-white/80">
+      💧 Save Water • 🌍 Conserve Every Drop • 💡 Smart Water for a Better Tomorrow • 💧 Save Water • 🌍 Conserve Every Drop • 💡 Smart Water for a Better Tomorrow
+    </marquee>
+  </footer>
+
+</body>
+</html>
